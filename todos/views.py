@@ -14,3 +14,10 @@ def index(request):
 		'todos': todos
 	}
 	return render(request, 'index.html', context)
+
+def details(request, id):
+	todo = Todo.objects.get(id=id)
+	context = {
+	'todo': todo
+	}
+	return render(request, 'details.html', context)

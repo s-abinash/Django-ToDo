@@ -5,15 +5,12 @@
 </head>
 <body>
 	<header>
-		<center><h1>MY TODO LIST</h1></center>
+		<center><h1>{{todo.title}}</h1></center>
 		<hr>
 	</header>
 	<main>
-		<ul>
-			{% for todo in todos%}
-			<li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a></li>
-			{% endfor %}
-		</ul>	
+		<p>{{todo.title}}</p>
+		<p>Created at {{todo.created_at}}</p>
 	</main>
 	<footer>
 		<center><h3>Copyright, Minanshu Singh 2018</h3></center>
