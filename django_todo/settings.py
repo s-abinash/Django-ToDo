@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'todolist',
         'USER': 'ROOT',
         'PASSWORD': '9434475673java',
