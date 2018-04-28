@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO LIST</title>
+</head>
+<body>
+	<header>
+		<center><h1>MY TODO LIST</h1></center>
+	</header>
+	<main>
+		<ul>
+			{% for todo in todos%}
+			<li>{{todo.title}}: {{todo.text}}</li>
+			{% endfor %}
+		</ul>	
+	</main>
+	<footer>
+		<center><h3>Copyright, Minanshu Singh 2018</h3></center>
+	</footer>
+	
+</body>
+</html>
