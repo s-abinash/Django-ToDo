@@ -1,5 +1,6 @@
 {% include 'partials/header.html' %}
 	<main>
+		<a href="/todos/add">New Todo +</a>
 		<ul>
 			{% for todo in todos%}
 			<li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a></li>
