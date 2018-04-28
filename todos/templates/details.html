@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>TODO LIST</title>
-</head>
-<body>
-	<header>
-		<center><h1>{{todo.title}}</h1></center>
-		<hr>
-	</header>
+{% include 'partials/header.html' %}
 	<main>
-		<p>{{todo.title}}</p>
+		<a href="/todos"> << Go Back</a>
+		<h3>{{todo.title}}</h3>
 		<p>Created at {{todo.created_at}}</p>
 	</main>
-	<footer>
-		<center><h3>Copyright, Minanshu Singh 2018</h3></center>
-	</footer>
-	
-</body>
-</html>
+{% include 'partials/footer.html' %}
