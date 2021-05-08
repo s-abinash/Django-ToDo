@@ -1,10 +1,25 @@
 {% include 'partials/header.html' %}
 	<main>
-		<a href="/todos/add">New Todo +</a>
-		<ul>
+
 			{% for todo in todos%}
-			<li><a href="/todos/details/{{todo.id}}">{{todo.title}}</a></li>
+                <div class="ui card centered raised " style="width: 400px;margin-bottom: 5px">
+                  <div class="content">
+                     <div class="header"><i class="clipboard check icon"></i> <a href="/todos/details/{{todo.id}}">{{todo.title}}</a></div>
+                        <div class="ui divider"></div>
+                        <div class="description">
+                           <h3> {{todo.text}}</h3>
+                           <h4 style="margin-top:0px ">Created Time : {{ todo.created_at }}</h4>
+                      </div>
+                  </div>
+               </div>
 			{% endfor %}
-		</ul>	
+            <div align="center">
+             <div style="width: 400px;align-content: center;padding-top: 5px">
+                 <button class="fluid ui primary button ">
+                  <i class="plus icon"></i> <a href="/todos/add" style="color: white"> Add Todo </a>
+               </button>
+            </div>
+            </div>
+
 	</main>
 {% include 'partials/footer.html' %}

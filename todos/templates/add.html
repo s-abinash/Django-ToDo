@@ -1,16 +1,38 @@
 {% include 'partials/header.html' %}
 
-<form action="{% url 'add' %}" method="post">
-{% csrf_token %}
-	<label for="title">Title: </label> </br>
-	<input type="text" name="title" id="title" />
-	</br>
 
-	<label for="text">Text: </label> </br>
-	<input type="text" name="text" id="text" />
-	</br>
+<div class="ui card centered" style="width: 500px">
+    <div class="content" >
+        <div class="header">Add New TODO</div>
+    </div>
+    <div class="ui divider"></div>
 
-	<input type="submit" value="submit" />
-</form>
-<br>
+    <form action="{% url 'add' %}" method="post"  class="ui form" style="margin:20px ">
+    {% csrf_token %}
+
+         <div class="field">
+            <label>Title</label>
+            <input type="text"  name="title" id="title" placeholder="Title">
+         </div>
+          <div class="field">
+            <label>Description</label>
+              <textarea type="text" name="text" id="text" placeholder="Description" rows="3"></textarea>
+          </div>
+
+        <div class="ui grid">
+            <div class="three column row">
+                <div class="column">
+                     <button type="submit"  value="submit" class="ui green button fluid">Save</button>
+                </div>
+                <div class="column">
+                    <button type="reset" class="ui primary button fluid">Clear</button>
+                </div>
+                <div class="column">
+                    <a href="/todos" ><button type="button" class="ui negative button fluid">Cancel</button> </a></div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
 {% include 'partials/footer.html' %}
