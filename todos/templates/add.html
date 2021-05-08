@@ -1,7 +1,7 @@
 {% include 'partials/header.html' %}
 
 
-<div class="ui card centered" style="width: 500px">
+<div class="ui card centered" style="width: 500px;margin-top: 100px">
     <div class="content" >
         <div class="header">Add New TODO</div>
     </div>
@@ -12,11 +12,11 @@
 
          <div class="field">
             <label>Title</label>
-            <input type="text"  name="title" id="title" placeholder="Title">
+            <input type="text"  name="title" id="title" placeholder="Title" required>
          </div>
           <div class="field">
             <label>Description</label>
-              <textarea type="text" name="text" id="text" placeholder="Description" rows="3"></textarea>
+              <textarea type="text" name="text" id="text" placeholder="Description" rows="3" required></textarea>
           </div>
 
         <div class="ui grid">

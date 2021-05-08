@@ -1,10 +1,13 @@
 {% include 'partials/header.html' %}
-	<main>
-
+	<main style="margin-top:15px ">
+            <div align="center"><h3>TODO  LIST</h3></div>
 			{% for todo in todos%}
-                <div class="ui card centered raised " style="width: 400px;margin-bottom: 5px">
+                <div class="ui card centered raised " style="width: 500px;margin-bottom: 5px;">
                   <div class="content">
-                     <div class="header"><i class="clipboard check icon"></i> <a href="/todos/details/{{todo.id}}">{{todo.title}}</a></div>
+                     <div class="header"><i class="clipboard check blue icon"></i>
+{#                         <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>#}
+                           {{todo.title}}
+                     </div>
                         <div class="ui divider"></div>
                         <div class="description">
                            <h3> {{todo.text}}</h3>
@@ -14,10 +17,10 @@
                </div>
 			{% endfor %}
             <div align="center">
-             <div style="width: 400px;align-content: center;padding-top: 5px">
-                 <button class="fluid ui primary button ">
-                  <i class="plus icon"></i> <a href="/todos/add" style="color: white"> Add Todo </a>
-               </button>
+             <div style="width: 500px;align-content: center;padding-top: 5px">
+              <a href="/todos/add" style="color: white">   <button class="fluid ui green button ">
+                  <i class="plus icon"></i>  Add Todo
+               </button> </a>
             </div>
             </div>
 

@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
 from .models import Todo
-
 # Create your views here.
 
 def index(request):
@@ -13,6 +10,8 @@ def index(request):
 	context = {
 		'todos': todos
 	}
+	# Todo.objects.get(id='3').delete();
+
 	return render(request, 'index.html', context)
 
 def details(request, id):
