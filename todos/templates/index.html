@@ -4,9 +4,22 @@
 			{% for todo in todos%}
                 <div class="ui card centered raised " style="width: 500px;margin-bottom: 5px;">
                   <div class="content">
-                     <div class="header"><i class="clipboard check blue icon"></i>
-{#                         <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>#}
-                           {{todo.title}}
+                     <div class="header">
+                            <div class="ui grid">
+                                <div class="two column row">
+                                    <div class="column">
+                                         <i class="clipboard check blue icon"></i>
+    {#                                       <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>#}
+                                         {{todo.title}}
+                                    </div>
+                                    <div class="column">
+                                       <div align="end">
+                                            <i class="edit blue icon"></i>
+                                            <i class="delete red icon"></i>
+                                       </div>
+                                </div>
+                              </div>
+                        </div>
                      </div>
                         <div class="ui divider"></div>
                         <div class="description">
@@ -23,6 +36,5 @@
                </button> </a>
             </div>
             </div>
-
 	</main>
 {% include 'partials/footer.html' %}
