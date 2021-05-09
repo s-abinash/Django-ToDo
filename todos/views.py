@@ -21,6 +21,10 @@ def details(request, id):
 	}
 	return render(request, 'details.html', context)
 
+def remove(request, id):
+	Todo.objects.get(id=id).delete();
+	return redirect('/todos')
+
 def add(request):
 
 	if(request.method == 'POST'):
