@@ -31,7 +31,7 @@ Change your mysql-server password in [settings.py](django_todo/settings.py)
 
 Navigate to **localhost://8000** on your favourite browser to see the app in action.
 
-#Developers
+# Developers
 * [Abinash](https://github.com/s-abinash)
 * [Arul Prasath](https://github.com/ArulPrasath15)
 * [Deepti](https://github.com/r-deepti)
