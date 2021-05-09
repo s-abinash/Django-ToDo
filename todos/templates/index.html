@@ -1,6 +1,6 @@
 {% include 'partials/header.html' %}
 	<main style="margin-top:15px ">
-            <div align="center"><h3>TODO  LIST</h3></div>
+            <div align="center"><h3 style="color: white;padding-bottom: 10px"> <i class="clipboard check white icon"></i>TODO  LIST</h3></div>
 			{% for todo in todos%}
                 <div class="ui card centered raised " style="width: 500px;margin-bottom: 5px;">
                   <div class="content">
@@ -30,7 +30,7 @@
                </div>
 			{% endfor %}
             <div align="center">
-             <div style="width: 500px;align-content: center;padding-top: 5px">
+             <div style="width: 500px;align-content: center;padding-top:5px;">
               <a href="/todos/add" style="color: white">   <button class="fluid ui green button ">
                   <i class="plus icon"></i>  Add Todo
                </button> </a>
