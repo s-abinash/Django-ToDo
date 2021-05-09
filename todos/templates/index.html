@@ -8,13 +8,13 @@
                             <div class="ui grid">
                                 <div class="two column row">
                                     <div class="column">
-                                         <i class="clipboard check blue icon"></i>
+                                         <i class="clipboard check purple icon"></i>
     {#                                       <a href="/todos/details/{{todo.id}}">{{todo.title}}</a>#}
                                          {{todo.title}}
                                     </div>
                                     <div class="column">
                                        <div align="end">
-                                            <i class="edit blue icon" style="margin-right: 10px"></i>
+                                           <a href="/todos/edit/{{ todo.id }}"> <i class="edit blue icon" style="margin-right: 10px"></i></a>
                                            <a href="/todos/removetodo/{{ todo.id }}"><i class="delete red icon" onclick=""></i></a>
                                        </div>
                                 </div>

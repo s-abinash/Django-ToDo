@@ -26,7 +26,6 @@ def remove(request, id):
 	return redirect('/todos')
 
 def add(request):
-
 	if(request.method == 'POST'):
 		title = request.POST['title']
 		text = request.POST['text']
@@ -36,3 +35,17 @@ def add(request):
 		return redirect('/todos')
 	else:
 		return render(request, 'add.html')
+
+def edit(request,id):
+	todo = Todo.objects.get(id=id)
+	context = {
+		'todo': todo
+	}
+	if(request.method == 'POST'):
+		id = id
+		title = request.POST['title']
+		text = request.POST['text']
+		Todo.objects.filter(id=id).update(title=title,text=text)
+		return redirect('/todos')
+	else:
+		return render(request, 'edit.html', context)
